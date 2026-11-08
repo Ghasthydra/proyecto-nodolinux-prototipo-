@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!-- pagos.html: página para contratar y pagar un servicio -->
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NodoLinux | Pagos</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header id="top">
+  <h1>Pagos</h1>
+  <nav aria-label="Navegación principal">
+    <ul><li><a href="index.html">Inicio</a></li><li><a href=""></a></li></ul>
+  </nav>
+</header>
+
+<main>
+  <h2>Elige tu plan</h2>
+  <!-- cada article tiene un id para que index.html enlace directo (pagos.html#seguro) -->
+  <article id="basico"><h3>Plan Básico: S/ 150</h3><p>Instalación de un servidor Linux.</p></article>
+  <article id="seguro"><h3>Plan Seguro: S/ 300</h3><p>Básico + firewall, HTTPS y respaldos.</p></article>
+  <article id="blockchain-plan"><h3>Plan Blockchain: S/ 400</h3><p>Taller de 2 horas + nodo de prueba.</p></article>
+
+  <h2>Formulario de pedido</h2>
+  <!-- action: página a la que va el visitante al enviar. method="get" funciona en un sitio estático -->
+  <form action="gracias.html" method="get">
+    <p><label for="nombre">Nombre completo:</label><br><input id="nombre" name="nombre" required></p>
+    <p><label for="correo">Correo electrónico:</label><br><input id="correo" name="correo" type="email" required></p>
+    <p><label for="plan">Plan:</label><br>
+    <select id="plan" name="plan"><option>Básico S/ 150</option><option>Seguro S/ 300</option><option>Blockchain S/ 400</option></select></p>
+    <!-- fieldset + legend: agrupa opciones de radio de forma accesible -->
+    <fieldset>
+      <legend>Método de pago</legend>
+      <label><input type="radio" name="pago" value="transferencia" checked style="width:auto"> Transferencia bancaria</label><br>
+      <label><input type="radio" name="pago" value="billetera" style="width:auto"> Billetera digital</label><br>
+      <label><input type="radio" name="pago" value="cripto" style="width:auto"> Criptomonedas</label>
+    </fieldset>
+    <p><label><input type="checkbox" required style="width:auto"> Acepto los términos del servicio</label></p>
+    <p><button type="submit">Confirmar pedido</button></p>
+  </form>
+  <p><small>Nota: es un sitio estático; no procesa pagos reales ni pide datos de tarjeta. Un cobro real requeriría una pasarela de pago externa.</small></p>
+</main>
+<hr>
+<footer><p>© 2026 NodoLinux · <a href="#top">Volver arriba</a></p></footer>
+</body>
+</html>

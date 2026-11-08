@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!-- index.html: página de inicio. Declara HTML5 -->
+<html lang="es"> <!-- lang: idioma, útil para lectores de pantalla -->
+<head>
+<meta charset="UTF-8"> <!-- permite tildes y ñ -->
+<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- adapta a celulares -->
+<meta name="description" content="Servicios Linux y consultoría en Blockchain.">
+<title>NodoLinux | Inicio</title>
+<link rel="stylesheet" href="styles.css"> <!-- enlaza el CSS externo -->
+</head>
+<body>
+
+<header id="top">
+  <h1>NodoLinux</h1>
+  <p>Servicios Linux y soluciones Blockchain para tu negocio</p>
+  <!-- nav: menú principal. Mezcla enlaces internos (#) y a otras páginas (.html) -->
+  <nav aria-label="Navegación principal">
+    <ul>
+      <li><a href="#linux">Servicios Linux</a></li>
+      <li><a href="#blockchain">Blockchain</a></li>
+      <li><a href="pagos.html">Pagos</a></li>
+      <li><a href=""></a></li>
+    </ul>
+  </nav>
+</header>
+
+<main> <!-- main: contenido principal (uno por página) -->
+
+  <section id="linux"> <!-- id: destino del enlace #linux -->
+    <h2>Servicios Linux</h2>
+    <article><h3>Instalación de servidores</h3><p>Ubuntu, Debian o Rocky Linux listos para producción.</p></article>
+    <article><h3>Servidores web</h3><p>Apache o Nginx, HTTPS, hosting y dominio.</p></article>
+    <article><h3>Seguridad y respaldos</h3><p>Firewall, SSH con llaves y copias de seguridad.</p></article>
+  </section>
+
+  <section id="blockchain">
+    <h2>Blockchain</h2>
+    <p>Una <strong>blockchain</strong> es un registro digital distribuido donde cada bloque guarda datos y el <em>hash</em> del bloque anterior.</p>
+    <ul>
+      <li>Asesoría sobre criptografía, billeteras, Bitcoin y Ethereum.</li>
+      <li>Nodos propios en Linux.</li>
+      <li>Prototipos de contratos inteligentes.</li>
+    </ul>
+    <!-- enlace externo: target="_blank" abre pestaña nueva, rel="noopener" por seguridad -->
+    <p><a href="https://ethereum.org/es/" target="_blank" rel="noopener">Aprender más en ethereum.org</a></p>
+  </section>
+
+  <section id="planes">
+    <h2>Planes</h2>
+    <!-- table con caption y scope: tabla accesible -->
+    <table>
+      <caption>Planes de servicio</caption>
+      <thead><tr><th scope="col">Plan</th><th scope="col">Incluye</th><th scope="col">Precio</th><th scope="col">Pagar</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Básico</th><td>Servidor Linux instalado</td><td>S/ 150</td><td><a href="pagos.html#basico">Contratar</a></td></tr>
+        <tr><th scope="row">Seguro</th><td>Básico + firewall, HTTPS, respaldos</td><td>S/ 300</td><td><a href="pagos.html#seguro">Contratar</a></td></tr>
+        <tr><th scope="row">Blockchain</th><td>Taller de 2 horas + nodo</td><td>S/ 400</td><td><a href="pagos.html#blockchain-plan">Contratar</a></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+</main>
+
+<hr>
+<footer><p>© 2026 NodoLinux · <a href="#top">Volver arriba</a></p></footer>
+</body>
+</html>
